@@ -1,5 +1,3 @@
-
-
 example1 :: Document
 example1 = 
     [ Paragraph "Hello, world!"
