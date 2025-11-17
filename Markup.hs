@@ -13,6 +13,7 @@ data Structure
     | UnorderedList [String]
     | OrderedList [String]
     | CodeBlock [String]
+    deriving Show
 
 trim :: String -> String
 trim = unwords . words
@@ -32,4 +33,5 @@ parseLines currentParagraph txts =
                 then paragraph : parseLines [] rest
                 else parseLines (currentLine : currentParagraph) rest
 
-
+main :: IO ()
+main = print $ parse "This is a paragraph.\n\nThis is another paragraph."

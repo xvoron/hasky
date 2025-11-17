@@ -1,4 +1,7 @@
+import Data.Word (Word8)
+
 main :: IO ()
+
 
 first a b = a
 increment n = n + 1
@@ -32,5 +35,12 @@ modd n =
     else meven (n - 1)
 
 
-
 main = print (meven 4)
+
+
+data Color = RGB Word8 Word8 Word8
+
+getBluePart :: Color -> Word8
+getBluePart color = 
+    case color of
+        RGB _ _ blue -> blue
